@@ -3,11 +3,11 @@ const app = express();
 const mongoose=require('mongoose');
 require('dotenv').config();
 const bodyParser = require('body-parser');
-const subscriberRouter= require('./routs/subscriber');
+const students_Router= require('./routs/students');
 const myKey=process.env.DB_URI
 const url=myKey.toString();
 app.use(bodyParser.json());
-app.use('/subscribers',subscriberRouter);
+app.use('/students',students_Router);
 
 app.use(express.json());
 
