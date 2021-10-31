@@ -23,7 +23,7 @@ router.get('/:id', async function (req, res){
 
 })
 router.post('/',async function (req, res){
-    console.log(req.body.regestration_year);
+  
     const new_student=new Student({
         name:req.body.name,
         university:req.body.university,
